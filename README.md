@@ -79,7 +79,7 @@ accuracy: 0.9931 - loss: 0.0174 - val_accuracy: 0.9140 - val_loss: 0.3718
 ## Test Accuracy:
 - The model achieved a Test Accuracy of 0.9045 equivalent to 90.45% which is lower that the training accuracy which concludes that the model may suffer from overfitting.
 - A solution would be to include a dataset that is much larger with training samples and more diverse to make sure the model does not overfit on the training data.
-- Also another solution is to address the class imbalance issue. More classes contain more samples than other which can be biased.
+- Also another solution is to address the class imbalance issue. More classes contain more samples than others which can be biased.
 ## Classification Report:
 - Here is the classification report which shows decent results:
   ![cr](https://github.com/user-attachments/assets/534f8e64-2ebe-48f3-bd0a-2c00cca7ec01)
