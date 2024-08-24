@@ -69,10 +69,44 @@ The aim of an LSTM-based emotion analysis application is to automatically detect
 ### Evaluate Model:
   - Test Data: Model's performance is assessed on test_padded and test_labels.
   - Metrics: Test accuracy and loss are calculated to evaluate the model's generalization performance.
-  - At the last epoch, the training and validation accuracy and loss values were:
-```accuracy: 0.9931 - loss: 0.0174 - val_accuracy: 0.9140 - val_loss: 0.3718```
+  - At the last epoch, the training and validation accuracy and loss values were:    
+```python
+accuracy: 0.9931 - loss: 0.0174 - val_accuracy: 0.9140 - val_loss: 0.3718
+```
+  - This can indicate that the model suffers a bit from overfitting since the training accuracy is higher than the validation accuracy.
+
 # Results
-## 
+## Test Accuracy:
+- The model achieved a Test Accuracy of 0.9045 equivalent to 90.45% which is lower that the training accuracy which concludes that the model may suffer from overfitting.
+- A solution would be to include a dataset that is much larger with training samples and more diverse to make sure the model does not overfit on the training data.
+- Also another solution is to address the class imbalance issue. More classes contain more samples than other which can be biased.
+## Classification Report:
+- Here is the classification report which shows decent results:
+  ![cr](https://github.com/user-attachments/assets/534f8e64-2ebe-48f3-bd0a-2c00cca7ec01)
+## Confusion Matrix:
+- Here is the confusion matrix:
+  ![cm](https://github.com/user-attachments/assets/78a3f376-c859-4740-8134-b106f21afb5f)
+## Individual Samples:
+![Individual Samples](https://github.com/user-attachments/assets/47864c16-5f0a-47e3-a595-2024110d0ccc)
+
+# Conclusion
+- The LSTM model demonstrated strong performance, achieving a high training accuracy of 99.31% and a validation accuracy of 91.40% in the final epoch. The test accuracy was also solid at 90.45%. The classification report further indicates that the model performs well across most classes, with particularly high precision, recall, and F1-scores for the "joy" and "sadness" categories.
+- However, there is a noticeable gap between the training accuracy and validation/test accuracy, suggesting that the model may be overfitting to the training data. Overfitting occurs when a model learns the training data too well, including noise and details specific to the training set, which hinders its ability to generalize to new, unseen data.
+
+## Suggestions for Improvement:
+### 1. Increase Dataset Size and Diversity:
+  - Expanding the training dataset to include more diverse examples can help the model learn a broader range of patterns and reduce overfitting.
+  - This can be achieved by collecting more data, using data augmentation techniques, or synthesizing new training samples.
+### 2. Address Class Imbalance:
+  - The model's performance on the "love" and "surprise" classes is lower compared to others, which may be due to class imbalance.
+  - To mitigate this, consider techniques such as oversampling minority classes, undersampling majority classes, or using advanced methods like SMOTE (Synthetic Minority Over-sampling Technique).
+### 3. Implement Regularization Techniques:
+  - Introduce additional regularization methods, such as L2 regularization (weight decay) or increasing the dropout rate, to prevent the model from relying too heavily on specific features.
+  - Experiment with different dropout rates or add dropout layers at different points in the model.
+### 4. Use Learning Rate Scheduling:
+  - Implement learning rate scheduling or early stopping to adjust the learning rate dynamically during training, helping the model converge better and avoid overfitting.
+### 5. Cross-Validation:
+  - Apply cross-validation to get a better estimate of model performance and ensure that the results are not dependent on a particular split of the data.
 
 # Technologies
 - Python
