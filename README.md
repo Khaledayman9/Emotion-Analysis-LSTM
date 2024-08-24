@@ -69,3 +69,12 @@ The aim of an LSTM-based emotion analysis application is to automatically detect
 ### Evaluate Model:
   - Test Data: Model's performance is assessed on test_padded and test_labels.
   - Metrics: Test accuracy and loss are calculated to evaluate the model's generalization performance.
+  - At the last epoch, the training and validation accuracy and loss values were:
+```accuracy: 0.9931 - loss: 0.0174 - val_accuracy: 0.9140 - val_loss: 0.3718```
+# Results
+## 
+
+# Technologies
+- Python
+- TensorFlow
+- Kaggle Notebook
