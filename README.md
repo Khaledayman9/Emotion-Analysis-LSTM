@@ -21,3 +21,8 @@ The aim of an LSTM-based emotion analysis application is to automatically detect
   5. Improved Communication: In applications like chatbots or virtual assistants, recognizing and responding appropriately to emotions can make interactions more natural and empathetic.
   
   6. Market Research: Businesses can use emotion analysis to understand consumer feelings towards products, services, or marketing campaigns, helping in decision-making and strategy development.
+
+
+# Forming and Cleaning Data
+- **Load Data:** Import text data from files and structure it into a DataFrame.
+- **Clean Data:** Process the text to remove unnecessary characters, handle missing values, and normalize text for consistency.
